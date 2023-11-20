@@ -4,21 +4,19 @@ body {
   text-align: center;
   margin: 0;
   padding: 0% 20% 5% 20%;
-  /*background-color: radial-gradient(circle, red, orange, yellow, green, blue, indigo, violet);
-   Your light mode background image */
   background-image: url('bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 
-  color: #333333; /* Dark text color*/
+  color: #333333; 
 }
 
 #myButton {
-  background-color: lightblue; /* Change this to any color you prefer */
-  color: black; /* Adjust text color for visibility, if needed */
-  padding: 10px 20px; /* Add padding for better appearance */
-  border: none; /* Remove default button border, if desired */
-  border-radius: 5px; /* Optional: Add rounded corners */
+  background-color: lightblue; 
+  color: black; 
+  padding: 10px 20px; 
+  border: none; 
+  border-radius: 5px; 
 }
 
 .container {
@@ -77,11 +75,7 @@ nav {
   top: 0;
   left: 1;
   width: 100%;
-  /*background-color: rgb(
-    227,
-    188,
-    230
-  );  Light background color for the nav bar */
+  
   padding: 10px;
   z-index: 1000;
   border: 2px solid grey; /* Adding a grey border to the nav */
@@ -133,11 +127,11 @@ nav ul li a {
   padding: 10px;
 }
 .dark-mode #myButton {
-  background-color: grey; /* Change this to any color you prefer */
-  color: white; /* Adjust text color for visibility, if needed */
-  padding: 10px 20px; /* Add padding for better appearance */
-  border: none; /* Remove default button border, if desired */
-  border-radius: 5px; /* Optional: Add rounded corners */
+  background-color: grey;
+  color: white; 
+  padding: 10px 20px; 
+  border: none; 
+  border-radius: 5px; 
 }
 .dark-mode nav ul li {
   display: inline;
@@ -146,17 +140,17 @@ nav ul li a {
   box-shadow: 0px 5px 10px grey;
 }
 .dark-mode nav ul li a {
-  color: #ffffff; /* Light text color for nav links in dark mode */
+  color: #ffffff; 
 }
 #experience p {
   box-sizing: border-box;
   box-shadow: 0 5px 10px black;
-  /*border: 1px solid black;*/
+  
 }
 .dark-mode #experience p {
   box-sizing: border-box;
   box-shadow: 0 5px 10px white;
-  /*border: 1px solid white;*/
+  
 }
 /* CSS for the flipped class to create a flip animation */
 .popup-container {
@@ -195,30 +189,30 @@ nav ul li a {
     255,
     255,
     0.5
-  ); /* Change background color for dark mode */
+  ); 
 }
 
 .dark-mode .popup-content {
-  background-color: #1f1f1f; /* Change background color for dark mode */
-  color: #ffffff; /* Change text color for dark mode */
-  border: 1px solid #ffffff; /* Change border color for dark mode */
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Change box shadow for dark mode */
+  background-color: #1f1f1f; 
+  color: #ffffff; 
+  border: 1px solid #ffffff; 
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); 
 }
 
 @media screen and (max-width: 768px) {
   nav {
-    /* Adjustments for smaller screens */
-    padding: 5px; /* Example: Reduce padding for smaller screens */
+    
+    padding: 5px; 
   }
 
   nav ul {
-    display: block; /* Ensure list items stack vertically */
-    text-align: center; /* Center-align the list items */
+    display: block; 
+    text-align: center; 
   }
 
   nav ul li {
-    display: block; /* Make list items stack vertically */
-    margin: 10px 0; /* Add margin between list items */
+    display: block; 
+    margin: 10px 0; 
   }
 
   
