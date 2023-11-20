@@ -1,0 +1,225 @@
+/* Default styles for light mode */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0% 20% 5% 20%;
+  /*background-color: radial-gradient(circle, red, orange, yellow, green, blue, indigo, violet);
+   Your light mode background image */
+  background-image: url('bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  color: #333333; /* Dark text color*/
+}
+
+#myButton {
+  background-color: lightblue; /* Change this to any color you prefer */
+  color: black; /* Adjust text color for visibility, if needed */
+  padding: 10px 20px; /* Add padding for better appearance */
+  border: none; /* Remove default button border, if desired */
+  border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flashcard {
+  width: 300px;
+  height: 300px;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.back {
+  transform: rotateY(180deg);
+  background-color: #f0f0f0; /* Example background color */
+  color: #333; /* Example text color */
+}
+
+.flashcard.flipped {
+  transform: rotateY(180deg);
+}
+#Achieved p{
+  box-sizing: border-box;
+  box-shadow: 0 5px 10px black;
+  padding: 10px;
+  margin: 5px 0;
+}
+
+#education p {
+  /* Light mode border color */
+  box-sizing: border-box;
+  box-shadow: 0 5px 10px black;
+  padding: 10px;
+  margin: 5px 0;
+}
+
+/* Navigation styles for light mode */
+
+nav {
+  top: 0;
+  left: 1;
+  width: 100%;
+  /*background-color: rgb(
+    227,
+    188,
+    230
+  );  Light background color for the nav bar */
+  padding: 10px;
+  z-index: 1000;
+  border: 2px solid grey; /* Adding a grey border to the nav */
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+  box-sizing: border-box;
+  box-shadow: 0px 5px 10px black;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333333; /* Dark text color for nav links */
+}
+
+/* Dark mode */
+.dark-mode {
+  /* Background and text colors for dark mode */
+  background-color: #1f1f1f; /*Dark background color */
+  background-image: url('black.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  color: #ffffff; /* Light text color */
+}
+
+/* Toggle border colors based on dark mode */
+.dark-mode #education p {
+  /* Dark mode border color */
+  box-sizing: border-box;
+  box-shadow: 0px 5px 10px white;
+}
+.dark-mode #Achieved {
+  box-sizing: border-box;
+  box-shadow: 0px 5px 10px white;
+}
+
+/* Navigation styles for dark mode */
+.dark-mode nav {
+  background-color: #1f1f1f; /* Dark background color for nav bar */
+  padding: 10px;
+}
+.dark-mode #myButton {
+  background-color: grey; /* Change this to any color you prefer */
+  color: white; /* Adjust text color for visibility, if needed */
+  padding: 10px 20px; /* Add padding for better appearance */
+  border: none; /* Remove default button border, if desired */
+  border-radius: 5px; /* Optional: Add rounded corners */
+}
+.dark-mode nav ul li {
+  display: inline;
+  margin-right: 20px;
+  box-sizing: border-box;
+  box-shadow: 0px 5px 10px grey;
+}
+.dark-mode nav ul li a {
+  color: #ffffff; /* Light text color for nav links in dark mode */
+}
+#experience p {
+  box-sizing: border-box;
+  box-shadow: 0 5px 10px black;
+  /*border: 1px solid black;*/
+}
+.dark-mode #experience p {
+  box-sizing: border-box;
+  box-shadow: 0 5px 10px white;
+  /*border: 1px solid white;*/
+}
+/* CSS for the flipped class to create a flip animation */
+.popup-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+/* Dark mode styles */
+.dark-mode .popup-container {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); /* Change background color for dark mode */
+}
+
+.dark-mode .popup-content {
+  background-color: #1f1f1f; /* Change background color for dark mode */
+  color: #ffffff; /* Change text color for dark mode */
+  border: 1px solid #ffffff; /* Change border color for dark mode */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Change box shadow for dark mode */
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    /* Adjustments for smaller screens */
+    padding: 5px; /* Example: Reduce padding for smaller screens */
+  }
+
+  nav ul {
+    display: block; /* Ensure list items stack vertically */
+    text-align: center; /* Center-align the list items */
+  }
+
+  nav ul li {
+    display: block; /* Make list items stack vertically */
+    margin: 10px 0; /* Add margin between list items */
+  }
+
+  
+}

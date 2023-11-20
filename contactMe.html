@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav>
+      <ul><strong>
+        <li><a href="index.html" >Portfolio</a></li>
+        <li><a href="Skill&Experience.html">Skills and Experience</a></li>
+        <li><a href="contactMe.html">Contact</a></li>
+        </strong>
+      </ul><br>
+      <button onclick="toggleMode()">Toggle Mode</button>
+    </nav>
+    <center>
+      <section id="contact">
+        <h2>Contact Me</h2>
+
+        <form id="contactForm">
+          <input
+            type="text"
+            id="name"
+            placeholder="Your Name"
+            required
+          /><br /><br />
+          <input
+            type="email"
+            id="email"
+            placeholder="Your Email"
+            required
+          /><br /><br />
+          <textarea id="message" placeholder="Your Message" required></textarea
+          ><br /><br />
+          <button type="button" onclick="sendEmail()">Send Message</button>
+        </form>
+      </section>
+    </center>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      function sendEmail() {
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        emailjs.send('service_001', 'template_001', {
+          name: name,
+          email: email,
+          message: message
+        }, 'OhT6WutZWTbaUFTp0')
+          .then(function(response) {
+            console.log('Email sent!', response);
+            alert('Email sent successfully!');
+          }, function(error) {
+            console.error('Email sending failed:', error);
+            alert('Failed to send email. Please try again later.');
+          });
+      }
+    </script>
+    <script src="script.js" defer></script>
+  </body>
+</html>

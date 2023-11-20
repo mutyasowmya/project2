@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skills and Experience</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav>
+      <ul><strong>
+        <li><a href="index.html">Portfolio</a></li>
+        <li><a href="Skill&Experience.html">Skills and Experience</a></li>
+        <li><a href="contactMe.html">Contact</a></li>
+        </strong>
+      </ul><br>
+      <button onclick="toggleMode()">Toggle Mode</button>
+    </nav>
+    <main>
+        <section id="skills">
+            <h2>Skills & Experience</h2>
+            
+            <div class="skills">
+              <strong>Skills:</strong><br />
+              <div class="skill">
+                <span class="skill-name">Java</span>
+                <div class="skill-rating">
+                  <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                </div>
+              </div>
+              <div class="skill">
+                <span class="skill-name">AWS</span>
+                <div class="skill-rating">
+                  <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                </div>
+              </div>
+              <div class="skill">
+                <span class="skill-name">DevOps</span>
+                <div class="skill-rating">
+                  <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                </div>
+              </div>
+              <div class="skill">
+                <span class="skill-name">Jenkins</span>
+                <div class="skill-rating">
+                  <span class="stars">&#9733;&#9733;&#9733;&#9734;&#9734;</span>
+                </div>
+              </div>
+              <div class="skill">
+                <span class="skill-name">Selenium</span>
+                <div class="skill-rating">
+                  <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                </div>
+              </div>
+              <div class="skill">
+                <span class="skill-name">Automation Testing</span>
+                <div class="skill-rating">
+                  <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+      <section id="experience">
+        <h2>Work/Volunteer Experience</h2>
+        <div class="company" onclick="showDetails('company1')">
+          <p>
+            Capgemini<br />Aug 2021 - March 2023, role: Software Engineer<br /><img
+              src="capgeminiLogo.jpg"
+              alt="capgemini logo"
+              style="width: 40%; height: auto"
+            />
+          </p>
+        </div>
+
+        <div class="company" onclick="showDetails('company2')">
+          <p>
+            ECIL<br />June 2019, role: Intern<br /><img
+              src="ecillogo.jpg"
+              alt="ECIL logo"
+              style="width: 40%; height: auto"
+            />
+          </p>
+        </div>
+      </section>
+      <div class="popup-container" id="popupContainer">
+        <div class="popup-content" id="popupContent">
+          <span onclick="hidePopup()" class="close-btn">&times;</span>
+          <p id="companyDetails"></p>
+        </div>
+      </div>
+    </main>
+    <script src="script.js" defer></script>
+  </body>
+</html>

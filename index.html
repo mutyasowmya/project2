@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav><strong>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#Achieved">Skills & Achievements</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul><br>
+      <button onclick="toggleMode()" id="myButton">Toggle Mode</button></strong>
+    </nav>
+    <nav><strong>
+      <ul>
+        <li><a href="Skill&Experience.html">Skills and Experience</a></li>
+        <li><a href="contactMe.html">Contact</a></li>
+      </ul></strong>
+    </nav>
+    <main>
+      <section id="Name" style="font-size: xx-large; text-align: center">
+        <h1><b>SOWMYA MUTYA</b></h1>
+      </section>
+
+      <section id="home" class="container">
+        <div id="contentWrapper" class="flashcard">
+          <div class="front">
+            <img
+              id="myImage"
+              src="ProfilePhoto.jpeg"
+              alt="Sowmya Mutya"
+              style="width: 80%; height: auto; padding-bottom: 30px"
+            />
+          </div>
+          <div class="back">
+            <p id="moreInfo">
+              I believe <br>
+              !!Passion for technology and commitment to excellence: Indicates a
+              strong motivation for learning and contributing to the field.!!
+            </p>
+          </div>
+        </div>
+      </section>
+      <p>
+        A self-motivated and dedicated software engineer with good knowledge of
+        algorithms and programming concepts and AWS cloud. I'm a passionate
+        Software Engineer with 18 months of experience and an AWS Certified
+        Developer Associate indulging in learning & gaining experience about
+        latest technology i.e., cloud computing, Java, and Selenium. Education
+      </p>
+
+      <section id="education">
+        <h2>Education History</h2>
+        <p><strong>Period: </strong>2023 - 2025<br />
+          Saint Louis University<br />
+          Master of Science in Computer Science 
+          
+        </p>
+        <p>
+          <strong>Period: </strong>2017-2021 <br />
+          Jawaharlal Nehru Technological University<br />
+          Electronics and communication engineering
+        </p>
+        <p>
+          <strong>Period: </strong>2015-2017 <br />
+          sri chaitanya junior college<br />
+          Senior Secondary
+        </p>
+        <p>
+          <strong>Period: </strong>2014-2015 <br />
+          ATOMIC ENERGY CENTRAL SCHOOL-2 <br />Higher Secondary
+        </p>
+      </section>
+
+      <section id="Achieved">
+        <h2>Achievements</h2>
+        <p>
+          - Certified in AWS Developer Associate Certification (2021-2023).<br /><br>
+          - Received Academic Excellence Award (2018-2021).<br /><br>
+          - Achieved first prize in presentation about LiFi technology in a fest during bachelor's.<br><br>
+          -Certified in Agile Software Development by Coursera (2022).
+        </p>
+        <p>
+          To know more about my technical skills and experience, navigate <a href="Skill&Experience.html" class="explore-link"><strong>HERE</strong></a>!
+        </p>
+        
+      </section>
+
+      <section id="experience">
+        <h2>Work/Volunteer Experience</h2>
+        <div class="company" onclick="showDetails('company1')">
+          <p>
+            <strong>Capgemini</strong><br />Aug 2021 - March 2023, role: Software Engineer<br /><br><img
+              src="capgeminiLogo.jpg"
+              alt="capgemini logo"
+              style="width: 20%; height: 25%"
+            />
+          </p>
+        </div>
+
+        <div class="company" onclick="showDetails('company2')">
+          <p><strong>ECIL</strong>
+            <br />June 2019, role: Intern<br /><br><img
+              src="ecillogo.jpg"
+              alt="ECIL logo"
+              style="width: 25%; height: 25%"
+            />
+          </p>
+        </div>
+      </section>
+
+      <div class="popup-container" id="popupContainer">
+        <div class="popup-content" id="popupContent">
+          <span onclick="hidePopup()" class="close-btn">&times;</span>
+          <p id="companyDetails"></p>
+        </div>
+      </div>
+
+      <section id="contact">
+        <h2>Contact Me</h2>
+        <h3>
+          Let's connect and discuss how we can collaborate - reach out to me
+          <a href="contactMe.html">here</a>.
+        </h3>
+      </section>
+    </main>
+    <script>
+      window.addEventListener("DOMContentLoaded", (event) => {
+        var contentWrapper = document.getElementById("contentWrapper");
+
+        function flipCard() {
+          contentWrapper.classList.toggle("flipped");
+        }
+
+        if (contentWrapper) {
+          contentWrapper.addEventListener("click", flipCard);
+        } else {
+          console.error("Content wrapper element not found");
+        }
+      });
+    </script>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
