@@ -11,6 +11,13 @@ body {
   color: #333333; 
 }
 
+nav a:hover{
+  color:red;
+}
+.dark-mode nav a:hover{
+  color:red;
+}
+
 #myButton {
   background-color: lightblue; 
   color: black; 
